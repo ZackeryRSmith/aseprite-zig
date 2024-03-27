@@ -1,5 +1,4 @@
-<img alt="Aseprite Logo with a hat and hammer" src="https://github.com/ZackeryRSmith/aseprite-zig/assets/72983221/5e0bca4a-c26a-41f9-b341-50721e68e8eb" align="left"></img>
-
+<img alt="Stack of Aseprite Logo's" src="https://github.com/ZackeryRSmith/aseprite-zig/assets/72983221/358f9649-d8bd-455f-be26-3f813f8d17b2" align="left"></img>
 
 # Aseprite-Zig Tests
 This folder contains all kinds of Aseprite files from different versions. 
