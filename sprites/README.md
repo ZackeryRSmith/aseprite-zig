@@ -1,6 +1,6 @@
 <img alt="Stack of Aseprite Logo's" src="https://github.com/ZackeryRSmith/aseprite-zig/assets/72983221/358f9649-d8bd-455f-be26-3f813f8d17b2" align="left"></img>
 
-# Aseprite-Zig Tests
+# Aseprite-Zig Sprites
 This folder contains all kinds of Aseprite files from different versions. 
 Feel free to delete this folder as it's not required to use **Aseprite-Zig**!
 
