@@ -1,7 +1,7 @@
 <img alt="Aseprite Logo with a hat and hammer" src="https://github.com/ZackeryRSmith/aseprite-zig/assets/72983221/5e0bca4a-c26a-41f9-b341-50721e68e8eb" align="left"></img>
 
+<br /><br />
 
-# Aseprite-Zig Tests
 This folder contains all kinds of tests.
 Feel free to delete this folder as it's not required to use **Aseprite-Zig**!
 
