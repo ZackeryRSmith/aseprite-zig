@@ -32,7 +32,7 @@ run_test() {
     fi
 
     # go back to the original directory
-    cd - || exit
+    cd - >/dev/null || exit
 }
 
 # recursively search for .zig files then run the test
