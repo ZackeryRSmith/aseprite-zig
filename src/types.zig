@@ -24,12 +24,16 @@ pub const STRING = struct {
    length: WORD,
    data: []BYTE,
 
-   pub fn parse(reader: anytype, a: std.mem.Allocator) !STRING {
-       const length = try reader.readInt(WORD, .little);
-       const buffer = a.alloc(u8, length);
-       try reader.readAtLeast(buffer, length);
-       return .{ .length = length, .data = buffer };
-   }
+    pub fn parse(reader: anytype, a: std.mem.Allocator) !STRING {
+        const length = try reader.readInt(WORD, .little);
+        const buffer = a.alloc(u8, length);
+        try reader.readAtLeast(buffer, length);
+        return .{ .length = length, .data = buffer };
+    }
+
+    pub fn destroy(self: STRING, a: std.mem.Allocator) void {
+        a.free(self.data);
+    }
 };
 /// A struct containing two LONG's: x and y.
 pub const POINT = struct { x: LONG, y: LONG };
