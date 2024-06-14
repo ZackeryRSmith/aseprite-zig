@@ -5,7 +5,7 @@ const types = @import("types.zig");
 // TODO: improve my spelling below this comment
 // TODO: imporve this doc comment
 /// A bare bones Aseprite file representation
-pub const RawAseprite = struct {
+pub const RawHeader = struct {
     file_size: types.DWORD,
     /// Magic number in the file.
     magic_number: types.WORD, // NOTE: ALWAYS 0xA5E0
@@ -38,7 +38,7 @@ pub const RawAseprite = struct {
     /// Height of grid. 0 if there is no grid, 16 by default.
     grid_height: types.WORD,
 
-    pub fn parse(reader: anytype) !RawAseprite {
+    pub fn parse(reader: anytype) !RawHeader {
         // TODO: maybe verify that `reader` is a reader of some kind?
         const file_size = try reader.readInt(types.DWORD, .little);
         const magic_number = try reader.readInt(types.WORD, .little);
