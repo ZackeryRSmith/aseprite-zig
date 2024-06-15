@@ -1,9 +1,8 @@
 const types = @import("types.zig");
+const assertReader = @import("assert_reader.zig").assertReader;
 
 // TODO: Aseprite
 
-// TODO: improve my spelling below this comment
-// TODO: imporve this doc comment
 /// A bare bones Aseprite file representation
 pub const RawHeader = struct {
     file_size: types.DWORD,
@@ -39,6 +38,7 @@ pub const RawHeader = struct {
     grid_height: types.WORD,
 
     pub fn parse(reader: anytype) !RawHeader {
+        assertReader(reader);
         // TODO: maybe verify that `reader` is a reader of some kind?
         const file_size = try reader.readInt(types.DWORD, .little);
         const magic_number = try reader.readInt(types.WORD, .little);
